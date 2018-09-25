@@ -1,578 +1,1034 @@
 body {
     margin: 0;
     padding: 0;
-  
-    font-family: "PT Sans Narrow", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-    background-color: #000000;
-    background-image: url("img/bg.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
-  /*С помощью нового класса у body зададим правила для черного шрифта, нового фонового изображения. Не забудем добавить фоновый цвет.*/
-  
-.inner-page {
-    color: #000000;
-  
-    background-color: #f9f6f3;
-    background-image: url("img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-  }
 
-a {
-    text-decoration: none;
-  }
-  
-.button {
-    font: inherit;
-  
-    text-align: center;
-    color: #ffffff;
-    vertical-align: middle;
-    text-transform: uppercase;
-  
-    background-color: #000000;
-    border: none;
-  }
-  
-.button:hover,
-.button:focus,
-.button:active {
-    background-color: #663d15;
-  }
-  
-.main-navigation {
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-  
-    background-color: #000000;
-  }
-  
-.site-navigation,
-.user-navigation {
-    list-style: none;
-  }
-  
-.site-navigation a,
-.user-navigation a {
-    color: #ffffff;
-  }
-  
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-    background-color: #242424;
-  }
-  
-.features-list {
-    list-style: none;
-  }
-  
-.feature-item {
-    text-align: center;
-  }
-  
-.feature-item h3 {
-    font-size: 30px;
-    line-height: 42px;
-  }
-  
-.index-columns {
-    color: #000000;
-  
-    background-color: #f8f5f2;
-    background-image: url("img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-  }
-  
-.index-columns h2 {
-    font-size: 30px;
-    line-height: 42px;
-  }
-  
-.news-list {
-    list-style: none;
-  }
-  
-.news-item time {
-    text-transform: none;
-  }
-  
-.gallery-content {
-    background-color: #cccccc;
-    border: 7px solid #ffffff;
-  }
-  
-.appointment-item input {
-    font: inherit;
-  
-    background-color: transparent;
-    border: 2px solid #000000;
-  }
-  
-.appointment-item input:focus {
-    border-color: #663d15;
-  }
-  /*Зададим размеры шрифта для главного заголовка страницы.*/
+    font-family: Roboto, Arial, sans-serif;
+    /*"Roboto", Roboto, sans-serif; /*название шрифта*/
+    font-size: 16px; /*размер шрифта*/
+    line-height: 24px; /*межстрачный интервал*/
+    font-weight: 400; /*400-normal, 700-bold*/
+    color: #283136; /*цвет текста*/
 
-.page-title {
-    font-size: 30px;
-    line-height: 42px;
-  }
-
-  /*Переходим к навигационной цепочке. Отменим дефолтный стиль у списка ссылок.*/
-.breadcrumbs {
-    list-style: none;
+    background-color: #ffffff; /*цвет фона*/
 }
-
-  /*Зададим цвет для всех ссылок в «хлебных крошках». 
-    Укажем цвет для пункта текущей страницы. 
-    Зададим подчеркивание для ссылок при наведении и фокусе.*/
-.breadcrumbs a {
-    color: #000000;
-}
-  
-.breadcrumbs a:hover,
-.breadcrumbs a:focus {
-    text-decoration: underline;
-}
-  
-.breadcrumbs-current {
-    color: #aba9a7;
-}
-
-/*Переходим к фильтрам. Убираем обводку у тега fieldset, она нам не нужна.*/
-.filter fieldset {
-    border: none;
-}
-
-/*Зададим параметры шрифта для legend.*/
-.filter legend {
-    font-size: 24px;
-    line-height: 30px;
-}
-
-/*Теперь сбросим дефолтный стиль списка для фильтров, зададим высоту строки.*/
-.filter ul {
-    list-style: none;
-    line-height: 18px;
-}
-
-/*Добавим цвет шрифта для подписи при наведении и фокусе на поле. А также назначим стиль для заблокированного поля.*/
-
-.filter-input:hover + label,
-.filter-input:focus + label {
-    color: #663d15;
-}
-
-.filter-input:disabled + label {
-    color: #000000;
-
-    opacity: 0.5;
-}
-
-/*Займемся стилизацией карточек товаров. 
-Отменяем стили списка по умолчанию. 
-Задаем карточке фоновый цвет и тень. 
-Состояние наведения должно быть заметно для пользователя, 
-поэтому назначаем на hover тень с меньшей прозрачностью.*/
-.catalog-list {
-    list-style: none;
-  }
-  
-.catalog-item {
-    background-color: #f8f8f8;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-.catalog-item:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-/*Цвет ссылок в карточке сделаем черным и зададим размеры шрифта в заголовке карточки.*/
-
-.catalog-item a {
-    color: #000000;
-  }
-  
-.catalog-item h3 {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-/*Название категории товара переводим в обычный регистр.*/
-.catalog-category {
-    text-transform: none;
-  }
-
-/*Цене товара задаем параметры шрифта, выравнивание текста по центру, светлый фон.*/
-.catalog-item-price b {
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-  
-    background-color: #e5e5e5;
-  }
-
-/*Кнопке «Купить» переопределяем высоту строки и белый цвет текста.*/
-.catalog-item-price .button {
-    line-height: 20px;
-    color: #ffffff;
-  }
-
-/*Нам осталось сделать стилизацию пагинации. Сбросим дефолтный стиль списка.*/
-.pagination-list {
-    list-style: none;
-  }
-
-/*Теперь назначаем ссылкам белый цвет и черный фон.*/
-.pagination-item a {
-    color: #ffffff;
-  
-    background-color: #000000;
-  }
-
-/*Задаем стиль ссылок при наведении, фокусе и определяем стиль для активной ссылки.*/
-.pagination-item a:hover,
-.pagination-item a:focus,
-.pagination-item a:active {
-    background-color: #663d15;
-}
-
-/*Стиль ссылки на текущую страницу отличается. 
-Задаем черный цвет текста и белый фон. 
-А чтобы стиль ссылки не менялся при взаимодействии, 
-дублируем стилевые правила текущей ссылки для различных состояний (наведение, фокус, активная ссылка).*/
-.pagination-item-current a {
-    color: #000000;
-  
-    background-color: #ffffff;
-  }
-  
-.pagination-item-current a:hover,
-.pagination-item-current a:focus,
-.pagination-item-current a:active {
-    color: #000000;
-  
-    background-color: #ffffff;
-  }
-
-/*Займемся стилизацией фотографий товара. Сначала сбросим дефолтный стиль у списка фотографий.*/
-.product-photo-preview {
-    list-style: none;
-  }
-
-/*Зададим тени для фотографий в списке и большой фотографии товара.*/
-.product-photo-preview li {
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-.product-photo-full {
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-  }
-
-/*Теперь зададим стили для артикула товара. Выравниваем текст по правому краю и назначаем подходящий цвет шрифта.*/
-.product-article {
-    text-align: right;
-    color: #aeaeae;
-  }
-
-/*Для цены назначим высоту строки, выравнивание текста по центру и фоновый цвет.*/
-.product-price b {
-    line-height: 20px;
-    text-align: center;
-  
-    background-color: #e5e5e5;
-  }
-
-/*Заголовку списка с комплектацией товара назначим размер шрифта и высоту строки. 
-А самому списку сбросим дефолтный стиль.*/
-.product-info h3 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  
-.product-info ul {
-    list-style: none;
-  }
-
-.main-footer {
-    color: #ffffff;
-  
-    background-color: #212121;
-    background-image: url("img/pattern-dark.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-  }
-  
-.footer-contacts a {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-  
-.footer-contacts a:hover,
-.footer-contacts a:focus {
-    text-decoration: none;
-  }
-  
-.footer-social {
-    text-align: center;
-  }
-  
-.footer-social ul {
-    list-style: none;
-  }
-  
-.social-button {
-    color: #ffffff;
-  }
-  
-.footer-copyright {
-    text-align: center;
-  }
-  
-.footer-copyright .button:hover,
-.footer-copyright .button:focus {
-    color: #000000;
-  
-    background-color: #ffffff;
-  }
-  
-.modal {
-    color: #000000;
-  
-    background-color: #f8f3f0;
-    background-image: url("img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-  }
-  
-.modal h2 {
-    font-size: 30px;
-    line-height: 42px;
-  }
-  
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    font: inherit;
-    color: #000000;
-    text-transform: uppercase;
-  
-    background-color: #f9f6f3;
-    border: 2px solid #000000;
-  }
-  
-.login-form input:focus {
-    border-color: #663d15;
-  }
-  
-.login-checkbox:hover,
-.login-checkbox:focus {
-    color: #663d15;
-  }
-  
-.restore {
-    color: #000000;
-    text-decoration: underline;
-  }
-  
-.restore:hover,
-.restore:focus {
-    text-decoration: none;
-  }
-
-/* ----- Сеточные стили ----- */
-
 
 html,
 body {
-  min-width: 1122px;
-  min-height: 1750px;
+    min-width: 100%;/*1440px;*/
+    min-height: 100%; /*1925px;*/
 }
 
-body {
-  /* Временно для сетки */
-  background-image: url('img/barbershop-index-grid.jpg');
-  background-size: 1372px auto;
-  background-repeat: no-repeat;
+a {
+    text-decoration: none; /*убираем подчерк. у ссылок*/
 }
 
 .container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
+    width: 1200px;  
+    margin: 0 auto;
 }
 
-.main-header {
-  margin-bottom: 75px;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+  }
 
-  /* Временно для сетки */
-  min-height: 285px;
+.site__navigation,
+.pagination__list,
+.services__list,
+.features,
+.footer__social,
+fieldset>ul {
+    list-style-type: none;
 }
 
-.main-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  /* Временно для сетки */
-  min-height: 285px;
-  background-color: transparent;
+.main {
+    background-color: #eeeeee;
+
+    position: relative;
 }
 
-.main-header-logo {
-  order: 2;
-  width: 368px;
-  height: 153px;
-  
-  /* Временно для сетки */
-  /* display: block;*/
+.main__title,
+.slideshow__name {
+    font-size: 55px;
+    line-height: 55px;
 }
 
-.main-navigation-wrapper {
-  width: 100%;
-  margin-bottom: 60px;
-  
-  background-color: #000000;
-  
-  /* Временно для сетки */
-  min-height: 70px;
-  background-color: transparent;
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /*главная ось направлена слева направо*/
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.main-navigation-wrapper .container {
-  display: flex;
-  justify-content: space-between;
+.logo>img:hover {
+    opacity: 0.7;
 }
 
-.site-navigation {
-  width: 620px;
-  margin: 0;
-  padding: 0;
-  
-  list-style: none;
-  
-  /* Временно для сетки */
-  min-height: 70px;
+.logo>img:focus {
+    opacity: 0.5; /* Полупрозрачность элемента */
 }
 
-.user-navigation {
-  width: 140px;
-  margin: 0;
-  padding: 0;
+.site__navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.site__navigation>li {
+    margin-right: 40px;
+}
+
+
+.basket {
+    margin: 0;
+}
+.basket>img {
+    padding-right: 27px;
+}
+
+.main__navigation,
+.basket {
+    line-height: 30px; /*межстрочный интервал*/
+    font-weight: 700; /*400-normal, 700-bold*/
+
+    list-style: none; /*стиль маркера*/
+}
+
+.main__navigation,
+.basket,
+.button,
+.services__title,
+.about__subtitle {
+    text-transform: uppercase; /*все прописные*/
+}
+
+.main__navigation a,
+.main__title,
+.basket,
+.slider-item>h3,
+.services__title,
+.about__title,
+.about__subtitle,
+.features__digits,
+.footer__slogan {
+    color: #000000;;
+}    
+.main__navigation a:hover,
+.basket:hover {
+    color: #fb565a;
+}
+
+.main__navigation a:focus,
+.basket:focus {
+    color: #afafaf;
+}
+
+.main__navigation a:active, 
+.basket:active {
+    color: #000000;
+    text-decoration: underline; /*подчеркнутый текст*/
+}
+
+.button {
+    display: inline;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 17px;
+    padding-top: 17px;
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    color: #ffffff;
+
+    background-color: #fb565a;
+    border-radius: 4px;
+}
+
+.button:hover,
+.footer__round:hover,
+.button:focus,
+.footer__round:focus {
+    background: #e74246; /* Цвет фона */
+}
+/*сделать для других кнопок*/
+.button:active,
+.footer__round:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background: #d7373b; /* Цвет фона */
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+/*slideshow*/
+.slider {
+    background-color: #eeeeee;
+    position: relative;
+}
+.slider-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 104px;
+    z-index: 80;
+
+    width: 160px;
+    height: 18px;
+
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
+}
+.slider-controls label {
+    position: relative;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;/*увеличим зону нажатия с помощью паддинга*/
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider-controls label::after {
+    content: "";
+    
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+
+    width: 18px;
+    height: 18px;
+    
+    background: #ffffff;
+    
+    border-radius: 50%;
+}
+.slider-controls .active::before {
+    content: "";
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
   
-  list-style: none;
+    list-style: none;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.slider-item {
+    display: none;
+    padding-top: 78px;
+    padding-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.slider-item:nth-child(1) {
+    background-image: url("../img/index/nerds-index-slide1.png");
+    background-repeat: no-repeat;
+    background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+    background-image: url("../img/index/nerds-index-slide2.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
   
-  /* Временно для сетки */
-  min-height: 70px;
+.slider-item:nth-child(3) {
+    background-image: url("../img/index/nerds-index-slide3.png");
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+    display: block;
+}
+  
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+    display: block;
+}
+  
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+    display: block;
+}
+  
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+  }
+
+.slider-item h3 {
+    max-width: 600px;
+    margin: 0;
+    margin-bottom: 27px;
+
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500; /*500-medium*/
+}
+
+.slider-item p {
+    max-width: 430px;
+    margin: 0;
+    margin-bottom: 38px;
+}
+
+.slider-item-button {
+    padding-left: 54px;
+    padding-right: 54px;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: #eeeeee; /* Цвет линии */
+    color: #eeeeee; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+
+/*Услуги*/
+.services__list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.services__title {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.services__text {
+    padding-bottom: 40px;
+}
+
+.button__apps {
+    background: #00ca74;
+}
+
+.button__apps:hover {
+    background: #00bc6c;
+}
+
+.button__apps:focus {
+    background: #00aa62;
+}
+
+.button__presentations {
+    background: #efc84a;
+}
+
+.button__presentations:hover {
+    background: #eab534;
+}
+
+.button__presentations:focus {
+    background: #e5a722;
+}
+/*О компании*/
+.about {  
+    /*padding-top: 40px;*/
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__right img {
+    padding-top: 40px;
+}
+
+.about__title {
+    font-size: 45px;
+    line-height: 45px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.about__text li{
+    padding-top: 25px;
 }
 
 .features {
-  margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 55px;
 }
 
-.features-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+.features__digits {
+    display: inline;
+    font-size: 45px;
+    line-height: 10.06px;
+    font-weight: 700; /*400-normal, 700-bold*/
+    padding-bottom: 30px;/*не работает отступ!!!*/
+}
 
-  list-style: none;
+.features__digits>sup {
+    font-size: 30px;
+}
+
+/*Партнеры*/
+.partners {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.partners__item>img {
+    opacity: 0.5; /* Полупрозрачность элемента */
+}
+
+.partners__item>img:hover {
+    opacity: 1.0;
+}
+
+.partners__item>img:focus {
+    opacity: 0.1; /* Полупрозрачность элемента */
+}
+
+/*Карта*/
+.map {
+    background: url("../img/map_with_marker.png") no-repeat 0 0;
+    padding: 45px 0;
+    margin-top: 85px;
+}
+
+.map__contacts {
+    width: 319px;
+    height: 308px;
+    background-color: #ffffff;
+    padding: 50px;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.map__contacts>h4 {
+    margin-top: 0px;
+}
+
+.button__contacts {
+    display: block;
+    margin-top: 40px;
+    /*padding-left: 45px;
+    padding-right: 45px;*/
+}
+
+/*Футер*/
+
+.footer {
+    display: flex;
+    
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 80px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 130px;
+}
+
+.footer__round {
+    margin: auto;
+    margin-right: 10px;
+	background-color: #e1e1e1;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	position: relative;
+    transition: .3s;
+}
+
+.round {   
+    position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+
+
+
+.footer__slogan {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    margin: 0px;
+}
+
+.footer__text {
+    line-height: 22px;
+    position: relative;
+    margin-bottom: -15px;
+}
+/* Всплывающая форма */
+.modal {
+    position: fixed;
+    color: #000000;
+    z-index: 100;
+    background-color: #ffffff;
+    
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); /*тень*/
+}
+.modal h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 45px; /*размер шрифта*/
+    line-height: 45px; /*межстрачный интервал*/
+    font-weight: 500; /*400-normal, 700-bold 500-medium*/
+
+}
+
+.modal-login {
+    display: none;
+
+    top: 15%;
+    left: 15%;
   
-  /* Временно для сетки */
-  min-height: 170px;
+    width: 760px;
+    /*margin-left: -240px;*/
+    /*height: 430px;    */
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 80px;
+    padding-bottom: 85px;
 }
 
-.feature-item {
-  width: 300px;
-
-  /* Временно для сетки */
-  min-height: 170px;
+.modal__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.index-columns {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 80px;
-  margin-bottom: 35px;
+.modal__form p {
+    margin: 0;
+}
+
+.order__form input[type="text"],
+.order__form input[type="letter"] {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    color: #a1a1a1;
+
+    border: 2px solid #d7dcde;
+    border-radius: 4px;
+}
+
+.order__form input[type="text"]:hover,
+.order__form input[type="letter"]:hover {
+    border: 2px solid #b4b9bb;
+    color: #b4b9bb;
+}
+
+.order__form input[type="text"]:focus,
+.order__form input[type="letter"]:focus {
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.order__form input[type="text"]:required,
+.order__form input[type="letter"]:required {
+    border: 2px solid #e74246;
+    color: #e74246;
+}
+
+.order__form input[type="text"] {
+    width: 360px;
+    height: 48px;
+    
+    margin-top: 14px;
+    margin-bottom: 40px;
+}
+
+.order__form input[type="letter"] {
+    width: 760px;
+    min-height: 116px;
+
+    margin-top: 14px;
+    margin-bottom: 50px;
+}
+
+.contactus__text {
+    font-size: 16px; /*размер шрифта*/
+    line-height: 18px; /*межстрачный интервал*/
+    font-weight: 700; /*400-normal, 700-bold 500-medium*/
+}
+
+.modal-close {
+    position: absolute;
+
+    /*left: 850px;*/
+    right: 90px;
+    top: 78px;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 0;
+
+    background-color: #ffffff;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #fecccd;
   
-  /* Временно для сетки */
-  background-image: none;
-  background-color: transparent;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+  
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after,
+.modal-close:focus::before,
+.modal-close:focus::after {
+    background-color: #fb565a;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+    background-color: #ffeeee;
+}
+
+.button__contactUs {
+    margin-bottom: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/**/
+
+.main__title {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 123px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    margin: 0;
+}
+
+.general {
+    display: flex;
+    padding-top: 57px;
+}
+
+.filter {
+    padding-left: 20px;
+    padding-right: 140px;
+}
+
+.filter__item {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+.filter__item legend {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.range__filter {
+    width: 260px;
+    margin-top: 49px;
+}
+
+.range__controls {
+    position: relative;
+
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.range__controls .scale {
+    height: 2px;
+
+    background: #d7dcde;
+}
+
+.range__controls .bar {
+    width: 160px;
+    height: 2px;
+
+    background: #00ca74;
+}
+
+.range__controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+
+    width: 4px;
+    height: 4px;
+    padding: 0;
+
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range__controls .toggle__min {
+    left: 18px;
+}
+
+.range__controls .toggle__max {
+    left: 160px;
+}
+
+.price__controls {
+    font-size: 0;
+}
+
+.price__controls label {
+    display: inline-block;
+    width: 50%;
+
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.price__controls input {
+    width: 60px;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 10px;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
+
+    border: none;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+.max__price {
+    text-align: right; /*горизонтальное выравнивание по правому краю*/
+}
+
+.filter__option {
+    line-height: 20px;
+
+    margin-bottom: 15px;
+    padding-left: 35px;
+}
+
+.filter__option label {
+    position: relative; /*относительное позиционирование*/
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter__input--checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -3px;
+
+    width: 25px;
+    height: 25px;
+
+    /*border: 2px solid #a4a4a4;*/
+    background-image: url("../img/svg-nerds/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter__input--checkbox:checked + label::after {
+    content: "";
+
+    position: absolute;
+
+    left: -35px;
+    top: -3px;
+
+    width: 25px;
+    height: 25px;
+    
+    
+    background-image: url("../img/svg-nerds/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*Как сделать галочку?*/
+}
+
+.filter__input:disabled + label {
+    color: #000000;
+  
+    opacity: 0.5;
+  }
+
+.filter__input--radio + label::before {
+    content: "";
+    position: absolute;
+    
+    left: -38px;
+    top: -5px;
+
+    width: 20px;
+    height: 20px;
+
+    border: 5px solid #a4a4a4;
+    border-radius: 50%;
+
+    /*background-image: url("../img/svg-nerds/radio-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;*/
+}
+
+.filter__input--radio:checked  + label::after {
+    content: "";
+    position: absolute;
+    
+    left: -28px;
+    top: 5px;
+
+    width: 10px;
+    height: 10px;
+    background-color: #a4a4a4;
+    border-radius: 50%;
+
+    /*background-image: url("../img/svg-nerds/radio-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;*/
+}
+
+.filter_grid Legend,
+.filter__features Legend {
+    margin-bottom: 20px;
+}
+
+.filter_grid ul,
+.filter__features ul {
+    padding: 0;
+    margin: 0;
+}
+
+.filter_grid {
+    margin-top: 45px;
+}
+
+.filter__features {
+    margin-top: 50px;
+    margin-bottom: 67px;
+}
+
+.filter__input:hover + label {
+    color: #000000;
+}
+
+.filter__btn {
+    padding-left: 88px;
+    padding-right: 88px;
+    padding-bottom: 17px;
+    padding-top: 17px; 
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+
+    background-color: #eeeeee;
+}
+
+.filter__btn:focus,
+.filter__btn:hover {
+    background-color: #dfdfdf;
+}
+
+.filter__btn:active {
+    background-color: #d5d5d5;
+    color: #959595;
 }
 
 
-.news {
-  width: 380px;
-
-  /* Временно для сетки */
-  min-height: 315px;
+.catalog__sort {
+    display: flex;
+    justify-content: space-between;
 }
 
-.gallery {
-  width: 300px;
-
-  /* Временно для сетки */
-  min-height: 315px;
+.sort__title,
+.value__title {
+    margin: 0;
+    padding-bottom: 60px;
 }
 
-.contacts {
-  width: 380px;
-
-  /* Временно для сетки */
-  min-height: 295px;
+.sort__direction {
+    padding-right: 20px;
 }
 
-.appointment {
-  width: 300px;
-
-  /* Временно для сетки */
-  min-height: 340px;
+.catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.main-footer {
-   padding: 60px 0;
-   margin-top: 65px;
+.catalog__item {
+    /*display: none;*/
+    margin-bottom: 33px;
 
-  /* Временно для сетки */
-  background: none;
-  min-height: 180px;
 }
 
-.main-footer .container {
-  display: flex;
+.catalog__item--rect {
+    display: flex;
+
+    padding-left: 0;
+    margin: 0;
+    
+    width: 360px;
+    height: 40px;
+
+    background-color: #e9e9e9;
+    border-radius: 5px 5px 0 0;
+
+    list-style-type: none;
 }
 
-.footer-contacts {
-  width: 320px;
-  margin: 0;
-  margin-right: 80px;
+.catalog__item--circle {
+    margin-top: 13px;
+    margin-left: 9px;
 
-  /* Временно для сетки */
-  min-height: 100px;
+    width: 14px;
+    height: 14px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 
-.footer-social {
-  width: 145px;
-
-  /* Временно для сетки */
-  min-height: 100px;
+.catalog__item--circle:nth-child(1) {
+    margin-left: 16px;
 }
 
-.footer-copyright {
-  width: 150px;
-  margin: 0;
-  margin-left: auto;
+/*---------*/
 
-  /* Временно для сетки */
-  min-height: 100px;
+.shape {
+    display: inline-block;
+}
+
+.shape.techmarkt {
+    background: url("../img/catalog/img-sedona.jpg") no-repeat;
+}
+
+/*---------*/
+
+.paginat__list {
+    display: flex;
+    justify-content: space-between;
+
+    width: 443px;
+
+    padding: 0;
+    padding-left: 11px;
+    list-style: none; /*стиль маркера*/
+}
+
+.paginat__list li {
+    width: 50px;
+    height: 50px;
+    
+    /*padding: 20px 20px;*/
+    margin: 0 auto;
+    
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700; /*400-normal, 700-bold*/
+    border-radius: 5px;
+
+    background-color: #eeeeee;
+}
+
+.paginat__item--current {
+    
+}
+
+.paginat__list li:nth-child(4) {
+    padding: 0;
 }
