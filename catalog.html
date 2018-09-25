@@ -1,300 +1,357 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title>Web-студия «Nerd's»</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Шапка сайта -->
-        <header class="main">
-            <!--container-Это центровщик -->
-            <div class="main__header container">
-                <!-- логотип сайта с размерами -->
-                <a class="logo" href="index.html">
-                    <!--http://via.placeholder.com/160x65 -->
-                    <img src="img/svg-nerds/nerds-logo.svg" width="160" height="65" alt="Логотип web-студии «Nerd's»">
-                </a>
-                <!-- Навигация по сайту с классом -->
-                <nav class="main__navigation">
-                <!-- Неупорядоченный список -->
-                    <ul class="site__navigation">
-                        <li><a href="Studio.html">Студия</a></li>
-                        <li><a href="Clients.html">Клиенты</a></li>
-                        <li class="site__navigation--current"><a href="Catalog.html">Магазин</a></li>
-                        <li><a href="Contacts.html">Контакты</a></li>
-                    </ul>
-                </nav>
-                <a class="basket" href="Basket.html">
-                    <img src="img/svg-nerds/cart-icon.svg" width="15" height="15" alt="Корзина">
-                    Корзина
-                </a>
-            </div>
-            <h1 class="main__title container">Магазин готовых шаблонов</h1>
-        </header>
-        <!-- Шапка сайта -->
+  <head>
+    <meta charset="utf-8">
+    <title>Барбершоп «Бородинский»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <!--На внутренних страницах фон контента и цвет шрифта отличаются от стилей на главной странице. 
+    Добавим body класс, с помощью которого будем переопределять некоторые правила стилей на внутренних страницах.-->
+  <body class="inner-page">
+    <!-- Шапка сайта -->
+    <header class="main-header">
+        <!-- логотип сайта с размерами -->
+        <a class="main-header-logo" href="index.html">
+            <img src="img/index-logo.svg" width="100" height="100" alt="Логотип барбершопа «Бородинский»">
+        </a>
+        <!-- Навигация по сайту с классом -->
+        <nav class="main-navigation">
+            <!-- Неупорядоченный список -->
+            <ul class="site-navigation">
+                <li><a href="info.html">информация</a></li>
+                <li><a href="nwes.html">новости</a></li>
+                <li><a href="price.html">прайс-лист</a></li>
+                <li class="site-navigation-current"><a href="catalog.html">магазин</a></li>
+                <li><a href="contacts.html">контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+                <li class="login-link">вход</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Шапка сайта -->
 
-    <!--Основное содержимое, тег main с классом container.-->
-    <!--каталог-->
-    <div class="catalog">
-      <!--центровщик-->
-      <div class="container">
-        <!--каталог внутренний-->
-        <main class="catalog__inner">
-          <!--сортировка каталога-->
-          <div class="catalog__sort">
-            <!--<h2 class="visually-hidden">Сортировка</h2>-->
-            
-            <h3 class="sort__title">СОРТИРОВАТЬ:</h3> 
-            <!--блок с типом сортировки-->
-            <div class="sort__types">
-              по цене по типу по названию
-            </div>
+    <!-- 
+        Переходим к основному содержимому. 
+        По аналогии с главной страницей используем тег main с классом container.
+     -->
 
-            <!--блок с направлением (direction) сортировки-->
-            <div class="sort__direction">
-              вниз вверх
-            </div>
-            
-            
-          </div><!--сортировка каталога-->
+    <main class="container">
+        <!--Добавим основной заголовок страницы. -->
+        <h1 class="page-title">СРЕДСТВА ДЛЯ УХОДА</h1>
+            <!--Далее идет навигационная цепочка.
+                Общепринятое название такого меню — «хлебные крошки» (breadcrumbs).
+                Разметим навигацию с помощью списка с подходящим классом breadcrumbs.-->
+            <ul class="breadcrumbs">
+                <li><a href="index.html">ГЛАВНАЯ</a></li>
+                <li><a href="catalog.html">МАГАЗИН</a></li>
+                <li class="breadcrumbs-current">СРЕДСТВА ДЛЯ УХОДА</li>
+            </ul>
+        <section class="filters">
+            <!--Весь раздел с фильтрами разметим с помощью section с классом и добавим заголовок, 
+                который в будущем будет скрыт. Такой заголовок останется видимым для поисковиков и читалок.-->
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+                <!--Разметим форму фильтрации тегом form, укажем адрес и метод отправки формы get.
+                Этот метод позволит пользователю передать ссылку на результаты своего поиска другому человеку.-->
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <!--Форма фильтрации содержит две группы фильтров: по производятелям и по типу товара. 
+                    Разметим эти группы с помощью тегов fieldset.-->
+                    <fieldset>
+                        <!--Добавим в каждую группу тег legend. С его помощью зададим заголовки группам в форме.-->
+                        <legend>Производители:</legend>
+                        <!--Перечень производителей - список. Создадим список с названиями производителей.
+                        Пользователь может выбрать сколько угодно производителей, поэтому для разметки этих полей подойдет input с типом checkbox. 
+                        Укажем каждому полю имя, состояние и подходящие классы. 
+                        И добавим поля выбора в элементы списка. Класс visually-hidden мы добавим заранее. 
+                        При стилизации нестандартных полей ввода все поля придется прятать.-->
+                        <!--Добавим тег label и привяжем поле к его названию.
+                        По аналогии добавим label к остальным полям выбора.-->
 
-          <!--список каталогов-->
-          <div class="catalog__list">
-            <!--Sedona-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Sedona">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">Sedona</h3>
-                <p class="catalog__item--text">Информационный сайт для туристов</p>
-                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--Sedona-->
-
-            <!--Pink App-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-pink.jpg" width="360" height="576" alt="Pink App">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">Pink App</h3>
-                <p class="catalog__item--text">Продуктовый лендинг приложения для iOS и Android</p>
-                <b><a class="button catalog__item--btn" href="#">9 900 ₽</a></b>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--Pink App-->
-
-            <!--Barbershop-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">Barbershop</h3>
-                <p class="catalog__item--text">Сайт салоны красоты. Для мужчин, да.</p>
-                <b><a class="button catalog__item--btn" href="#">9 900 ₽</a></b>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--Barbershop-->  
-
-            <!--MISHKA-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-mishka.jpg" width="360" height="576" alt="Mishka Hover">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">MISHKA</h3>
-                <p class="catalog__item--text">Интернет-магазин вязаных игрушек</p>
-                <b><a class="button catalog__item--btn" href="#">9 900 ₽</a></b>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--MISHKA-->  
-
-            <!--A Plus-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-aplus.jpg" width="360" height="576" alt="A Plus">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">A Plus</h3>
-                <p class="catalog__item--text">Лендинг курсов повышения квалификации</p>
-                <b><a class="button catalog__item--btn" href="#">9 900 ₽</a></b>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--A Plus-->  
-
-            <!--КВАСТ-->
-            <div class="catalog__item">
-              <img class="catalog__item--img" src="img/catalog/img-kvast.jpg" width="360" height="576" alt="КВАСТ">
-              <div class="catalog__item--info">
-                <h3 class="catalog__item--title">КВАСТ</h3>
-                <p class="catalog__item--text">Лендинг курсов повышения квалификации</p>
-                <b><a class="button catalog__item--btn" href="#">9 900 ₽</a></b>
-              </div><!--catalog__item-info-->
-            </div><!--catalog__item-->
-            <!--КВАСТ-->  
-
-          </div><!--список каталогов catalog__list-->
-
-        </main><!--каталог внутренний-->
-
-        <div class="pagination">
-          <!--Теперь разметим нумерацию страниц. 
-            Для нее тоже есть общепринятое название — пагинация.-->
-          <ul class="pagination__list">
-          <!--Каждая кнопка - ссылка на одну из страниц на сайте.-->
-            <li class="pagination__item pagination__item--current">1</li>
-            <!--Для кнопки, указывающей на текущую страницу, добавим соответствующий класс.
-            ёpagination-item-current-->
-            <li class="pagination__item"><a href="#">2</a></li>
-            <li class="pagination__item"><a href="#">3</a></li>
-            <li class="pagination__item"><a href="#">4</a></li>
-            <li class="button pagination__item"><a href="#">Следующая</a></li>
-          </ul>    
-        </div>
+                        <ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="baxter-of-california" id="filter-baxter-of-california" checked>
+                                <label for="filter-baxter-of-california">Baxter of California</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="mr-natty" id="filter-mr-natty">
+                                <label for="filter-mr-natty">Mr Natty</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="suavecito" id="filter-suavecito" checked>
+                                <label for="filter-suavecito">Suavecito</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="malin-goetz" id="filter-malin-goetz">
+                                <label for="filter-malin-goetz">Malin+Goetz</label>
+                            </li>
+                            <li class="filter-option">
+                                <!--Добавим для одного из полей состояние disabled, чтобы проверить, как будет выглядеть элемент.-->
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="murrays" id="filter-murrays" disabled>
+                                <label for="filter-murrays">Murray’s</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" 
+                                    name="american-crew" id="filter-american-crew" checked>
+                                <label for="filter-american-crew">American Crew</label>
+                            </li>
+                        </ul>
+                                                
+                    </fieldset>
+                    <fieldset>
+                        <!--Добавим в каждую группу тег legend. С его помощью зададим заголовки группам в форме.-->
+                        <legend>Группы товаров:</legend>
+                        <!--Вторая группа фильтров — тоже список, но уже групп товаров.
+                        
+                        В этой группе фильтров пользователь может выбрать только один тип товара, поэтому подойдут радиопереключатели. 
+                        Добавляем в элементы списка поля с типом radio. Обратите внимание, в случае, когда возможен выбор только 
+                        одного поля из множества, атрибут name у каждого тега input должен быть одинаковым, а значения должны различаться.
+                    
+                        Аналогично добавим label к радиокнопкам из «Группы товаров».-->
+                        <ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving" id="filter-shave">
+                                <label for="filter-shave">Бритвенные принадлежности</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" id="filter-care" checked>
+                                <label for="filter-care">Средства для ухода</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories">
+                                <label for="filter-accessories">Аксессуары</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!--Осталось добавить кнопку для отправки формы.-->
+                    <button type="submit" class="filter-button button">Показать</button>
+                </form>
+            <!-- Здесь будет форма -->
+        </section>
         
-      </div><!--центровщик-->
-    </div><!--каталог-->
+        <!--В следующем смысловом разделе перечислены сами товары.
+            Добавим тег section с соответствующим классом и скрытый заголовок.-->
+        <section class="catalog">
+            <h2 class="visually-hidden">Список средств для ухода</h2>
+            <ul class="catalog-list">
 
-    <!--Фильтр товаров-->
-    <aside class="filter">
-      <h2 class="visually__hidden">Фильтр товаров</h2>
-      <form action="" class="filter__form">
-        <!--стоимость -->  
-        <div class="filter__block">
-          <h4 class="filter__title">Стоимость</h4>
-          <div class="filter__blok-inner">
-            <div class="half__width">
-              <h2 class="value__title">Стоимость:</h2>
-              <!--<label for="rating">Оценка поездки</label>-->  
-              0 <input type="range" id="rating" name="rating" min="1" max="15000" step="1" value="10" oninput="ratingOutput.value = rating.value"> 15000
-            </div>
-            <div class="half-width output-area">
-              от 0 до 
-              <output name="ratingOutput" id="ratingOutput">15000</output>
-            </div>
-          </div>
-        </div>
-        <!--стоимость -->  
+                <!--Набор для путешествий «Baxter of California-->
+                <li class="catalog-item">
+                    <!--Название товара, его категория и изображение обернуты в ссылки, которые ведут на одну и ту же страницу. 
+                        В данном случае две ссылки с одинаковым адресом избыточны в разметке.
+                    
+                    Обернем все содержимое в одну ссылку: название и категорию товара, его изображение.
+                    В HTML5 так делать можно. Вадим Макеев рассказывал об этом в одном из выпусков HTML Шортов.-->
+                    <h3>
+                        <!--<a href="catalog-item.html">-->
+                        <!-- В ТЗ проекта сказано, что название товара состоит из двух строк, 
+                        но по сути является одним блоком. 
+                        Разбиваем содержимое заголовка на два тега span. 
+                        В один запишем категорию товара, а в другой его название -->
+                        <span class="catalog-category">Набор для путешествий</span>
+                        <span class="catalog-item-title">«Baxter of California»</span>
+                        <!--</a>-->
+                    </h3>
 
-        <!--Сетка -->  
-        <div class="filter__block">
-          <h4 class="filter__title">Сетка:</h4>
-          <div class="filter__blok-inner">
-            <label>
-              <input type="radio" name="question-one" value="adaptive" checked>Адаптивная;
-            </label>
-            <br>
-            <label>
-              <input type="radio" name="question-one" value="fixed">Фиксированная;
-            </label>
-            <br>
-            <label>
-              <input type="radio" name="question-one" value="rubber">Резиновая;
-            </label>
-          </div>
-        </div>
-        <!--Сетка -->  
+                    <!--Теперь разметим описание. Добавим тег p. 
+                        Внутри этого абзаца находится изображение товара. 
+                        Оно является контентным. Добавляем в разметку тег img. 
+                        Не забываем указывать значения всех обязательных атрибутов (src, alt, width, height).-->
+                    <p class="catalog-item-image">
+                        <!-- Клик по фотографии товара открывает полноразмерное фото.
+                            Обернем фотографию в ссылку.-->
+                        <!--<a href="catalog-item.html">-->
+                        <img src="img/product-1.jpg" width="100" height="100" alt="Набор для путешествий «Baxter of California»">
+                        <!--</a>-->
+                    </p>
+                    
+                    <!--Цена товара и кнопка покупки составляют небольшой, 
+                        но важный раздел в карточке товара - раздел покупки.
+                        Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                        <!--Разметим цену товара с помощью тега b. 
+                        Кнопка оплаты добавляет товар в корзину, 
+                        поэтому размечаем ее с помощью ссылки.-->
+                        <b>2 900 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
 
-        <!--Особенности -->
-        <div class="filter__block">
-          <h4 class="filter__title">Особенности:</h4>
-          <div class="filter__blok-inner">
-            <label>
-              <input type="checkbox" name="question-one" value="adaptive" checked>Слайдер;
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="question-one" value="fixed">Блок преимуществ;
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="question-one" value="rubber">Новости;
-            </label> 
-            <br>
-            <label>
-              <input type="checkbox" name="question-one" value="fixed">Галерея;
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="question-one" value="rubber">Корзина;
-            </label> 
-          </div>
-        </div>
-        <!--Особенности -->
-        <button class="button filter__btn" type="submit">Показать</button>
-      </form>
-    </aside>
-    <!--Фильтр товаров-->
+                <!--Увлажняющий кондиционер «Baxter of California-->
+                <li class="catalog-item">
+                    <h3>
+                        <span class="catalog-category">Увлажняющий кондиционер</span>
+                        <span class="catalog-item-title">«Baxter of California»</span>
+                    </h3>
+                    <p class="catalog-item-image">
+                        <img src="img/product-2.jpg" width="100" height="100" alt="Увлажняющий кондиционер «Baxter of California»">
+                    </p>
     
-    <!--Карта -->
-    <section class="map">
-      <div class="container">
-          <div class="map__contacts">
-              <h4>NЁRDS DESIGN STUDIO</h4>
-              <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-              <p>тел. +7 (812) 275-75-75</p>
-              <a class="button button__contacts" href="#">Напишите нам</a>
-          </div>
-      </div>
-  </section>       
-    <!--Карта -->
-      
-          
-      
-    <!--Напишите нам-->
-    <section class="contactUs">
-      <h2 class="contactUs__title">Напишите нам</h2>
-      <span class="modal-close">x</span>  
-      <p class="contactUs__title">Ваше имя:</p>
-      <!--lable-->
-      <p class="contactUs__title">Ваш e-mail:</p>
-      <!--lable-->
-      <p class="contactUs__title">Текст письма:</p>
-      <!--lable-->
-      
-      <!--button-->
-      <a class="contactUs-button" href="#">ОТПРАВИТЬ</a>
-    </section>
-    <!--Напишите нам-->
-      
-          <!--Футер-->
-    <footer class="container">
-        <div class="footer">
-            <div class="footer__left">
-                <div class="footer__social">
-                    <a href="#" title="Вконтакте" class="footer__round">
-                        <img src="img/svg-nerds/vk-icon.svg" alt="Вконтакте" class="round">
-                    </a>
-                    <a href="#" title="Фейсбук" class="footer__round">
-                        <img src="img/svg-nerds/fb-icon.svg" alt="Фейсбук" class="round">
-                    </a>
-                    <a href="#" title="Инстаграм" class="footer__round">
-                        <img src="img/svg-nerds/insta-icon.svg" alt="Инстаграм" class="round">
-                    </a>
-                </div>
-
-
-                <!--<ul class="footer__social">
-                    <li class="footer__round">
-                        <a href="#" title="Вконтакте">
-                            <img src="img/svg-nerds/vk-icon.svg" alt="Вконтакте" class="round">
-                        </a>
-                    </li>
-                    <li class="footer__round">
-                        <a href="#" title="Фейсбук">
-                            <img src="img/svg-nerds/fb-icon.svg" alt="Фейсбук" class="round">
-                        </a>
-                    </li>
-                    <li class="footer__round">
-                        <a href="#" title="Инстаграм">
-                            <img src="img/svg-nerds/insta-icon.svg" alt="Инстаграм" class="round">
-                        </a>
-                    </li>
-                </ul>-->
-
-            </div><!--footer__left-->
-            <div class="footer__right"> 
-                <h2 class="footer__slogan">Давайте дружить, это выгодно!</h2>
-                <p class="footer__text">Скидка 10% для друзей из социальных сетей.</p>
-            </div><!--footer__right-->    
-        </div><!--footer-->
-    </footer><!--container-->
+                        <!--Цена товара и кнопка покупки составляют небольшой, 
+                            но важный раздел в карточке товара - раздел покупки.
+                            Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                            <!--Разметим цену товара с помощью тега b. 
+                            Кнопка оплаты добавляет товар в корзину, 
+                            поэтому размечаем ее с помощью ссылки.-->
+                        <b>750 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
+            
+                <!--Гель для волос «SUAVECITO»-->
+                <li class="catalog-item">
+                    <h3>
+                        <span class="catalog-category">Гель для волос</span>
+                        <span class="catalog-item-title">«SUAVECITO»</span>
+                    </h3>
+                    <p class="catalog-item-image">
+                        <img src="img/product-3.jpg" width="100" height="100" alt="Гель для волос «SUAVECITO»">
+                    </p>
     
+                        <!--Цена товара и кнопка покупки составляют небольшой, 
+                            но важный раздел в карточке товара - раздел покупки.
+                            Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                            <!--Разметим цену товара с помощью тега b. 
+                            Кнопка оплаты добавляет товар в корзину, 
+                            поэтому размечаем ее с помощью ссылки.-->
+                        <b>290 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
+            
+                
+            
+                <!--Глина для укладки волос «American crew»-->
+                <li class="catalog-item">
+                    <h3>
+                        <span class="catalog-category">Глина для укладки волос</span>
+                        <span class="catalog-item-title">«American crew»</span>
+                    </h3>
+                    <p class="catalog-item-image">
+                         <img src="img/product-4.jpg" width="100" height="100" alt="Глина для укладки волос «American crew»">
+                    </p>
+    
+                        <!--Цена товара и кнопка покупки составляют небольшой, 
+                            но важный раздел в карточке товара - раздел покупки.
+                            Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                            <!--Разметим цену товара с помощью тега b. 
+                            Кнопка оплаты добавляет товар в корзину, 
+                            поэтому размечаем ее с помощью ссылки.-->
+                        <b>500 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
+            
+                <!--Гель для волос «AMERICAN CREW»-->
+                <li class="catalog-item">
+                    <h3>
+                        <span class="catalog-category">Гель для волос</span>
+                        <span class="catalog-item-title">«American crew»</span>
+                    </h3>
+                    <p class="catalog-item-image">
+                        <img src="img/product-5.jpg" width="100" height="100" alt="Гель для волос «American crew»">
+                    </p>
+    
+                        <!--Цена товара и кнопка покупки составляют небольшой, 
+                            но важный раздел в карточке товара - раздел покупки.
+                            Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                            <!--Разметим цену товара с помощью тега b. 
+                            Кнопка оплаты добавляет товар в корзину, 
+                            поэтому размечаем ее с помощью ссылки.-->
+                        <b>300 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
+
+                <!--Набор для бритья «Baxter of California»-->
+                <li class="catalog-item">
+                    <h3>
+                        <span class="catalog-category">Набор для бритья</span>
+                        <span class="catalog-item-title">«Baxter of California»</span>
+                    </h3>
+                    <p class="catalog-item-image">
+                        <img src="img/product-6.jpg" width="100" height="100" alt="Набор для бритья «Baxter of California»">
+                    </p>
+    
+                        <!--Цена товара и кнопка покупки составляют небольшой, 
+                            но важный раздел в карточке товара - раздел покупки.
+                            Обернем цену и кнопку "Купить" в абзац.-->
+                    <p class="catalog-item-price">
+                            <!--Разметим цену товара с помощью тега b. 
+                            Кнопка оплаты добавляет товар в корзину, 
+                            поэтому размечаем ее с помощью ссылки.-->
+                        <b>3 900 ₽</b>
+                        <a class="button" href="#">Купить</a>
+                    </p>
+                </li>
+            </ul>
+
+            <!--Теперь разметим нумерацию страниц. 
+                Для нее тоже есть общепринятое название — пагинация.-->
+            <ul class="pagination-list">
+                <!--Каждая кнопка - ссылка на одну из страниц на сайте.-->
+                <li class="pagination-item"><a href="#">1</a></li>
+                <!--Для кнопки, указывающей на текущую страницу, добавим соответствующий класс.
+                pagination-item-current-->
+                <li class="pagination-item pagination-item-current">2</li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+            </ul>    
+        </section>  
+    </main>
+
+    <!--Футер на всех страницах одинаковый. 
+        Скопируем его из разметки главной страницы.-->
+    <footer class="main-footer">
+        <p class="footer-contacts">
+            Барбершоп «Бородинский»<br>
+            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+            <a href="map.html">Как нас найти?</a><br>
+            Телефон: +7 (812) 666-02-66
+        </p>
+        <div class="footer-social">
+            <b>Давайте дружить!</b>
+            <ul>
+                <li><a class="social-button" href="#">Вконтакте</a></li>
+                <li><a class="social-button" href="#">Фейсбук</a></li>
+                <li><a class="social-button" href="#">Инстаграм</a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">
+            <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
+    </footer>
+
+    <!--Модальное окно для входа в личный кабинет пользователя тоже 
+        скопируем из разметки главной страницы — это окно выглядит 
+        одинаково для всех страниц проекта.-->
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <!-- Здесь будет форма -->
+        <span class="modal-close">x</span>
+    </section>        
   </body>
 </html>
+
+<!--
+    <br><br><h3>ПРОИЗВОДИТЕЛИ:</h3>
+            <ul>
+                <li>Baxter of California</li>
+                <li>Mr Natty</li>
+                <li>Suavecito</li>
+                <li>Malin+Goetz</li>
+                <li>Murray’s</li>
+                <li>American Crew</li>
+            </ul>
+-->
