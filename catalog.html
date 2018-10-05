@@ -104,113 +104,102 @@
             </form>
         </aside><!--Фильтр товаров-->
 
-        <div class="catalog"><!--центровщик-->
-            <div><!--container-->
+        <div class="catalog">
+            <div>
                 <main class="catalog__inner">
-                    <div class="catalog__sort"><!--сортировка каталога-->
+                    <div class="catalog__sort">
                         <h2 class="visually-hidden">Сортировка</h2>
                         <h3 class="sort__title">СОРТИРОВАТЬ:</h3> 
-                        <div class="sort__types"><!--блок с типом сортировки-->
-                            по цене по типу по названию
-                        </div>          
-                        <div class="sort__direction"><!--блок с направлением (direction) сортировки-->
-                            вниз вверх
-                        </div>
-                    </div><!--сортировка каталога-->
+                        <ul class="sort__types">
+                            <li class="sort__button sort__button--current"><a href="#">по цене</a></li>
+                            <li class="sort__button"><a href="#">по типу</a></li>
+                            <li class="sort__button"><a href="#">по названию</a></li>
+                        </ul>
+                        <ul class="sort__direction">
+                            <li class="triangle__down"></li>
+                            <li class="triangle__up"></li>
+                        </ul>
+                    </div>
 
                     
 
                     <div class="catalog__list"><!--список каталогов-->
-                        <div>
-                        <ul class="catalog__item--rect">
-                            <li class="catalog__item--circle"></li>
-                            <li class="catalog__item--circle"></li>
-                            <li class="catalog__item--circle"></li>
-                        </ul>
-                        <section class="shape techmarkt">
-                            <div class="details">                                
-                                <header>Sedona</header>
-                                <p>Информационный сайт для туристов</p>
-                                <a class="button" href="#">9 900 ₽</a>
-                            </div>
-                        </section>
-                        </div>
-                        <div class="catalog__item"><!--Sedona-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                        <div class="catalog__item">
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Sedona">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">Sedona</h3>
-                                <p class="catalog__item--text">Информационный сайт для туристов</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
-                            </div><!--catalog__item-info-->
+                            <img class="catalog__img" src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Sedona">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">Sedona</h3>
+                                <p class="catalog__text">Информационный сайт<br>для туристов</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
+                            </div>
                         </div><!--catalog__item--><!--Sedona-->
                         <div class="catalog__item"><!--Pink App-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-pink.jpg" width="360" height="576" alt="Pink App">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">Pink App</h3>
-                                <p class="catalog__item--text">Продуктовый лендинг приложения для iOS и Android</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
+                            <img class="catalog__img" src="img/catalog/img-pink.jpg" width="360" height="576" alt="Pink App">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">Pink App</h3>
+                                <p class="catalog__text">Продуктовый лендинг<br>приложения для iOS и Android</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
                             </div><!--catalog__item-info-->
                         </div><!--catalog__item--><!--Pink App-->
                         <div class="catalog__item"><!--Barbershop-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">Barbershop</h3>
-                                <p class="catalog__item--text">Сайт салоны красоты. Для мужчин, да.</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
+                            <img class="catalog__img" src="img/catalog/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">Barbershop</h3>
+                                <p class="catalog__text">Сайт салоны красоты.<br>Для мужчин, да.</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
                             </div><!--catalog__item-info-->
                         </div><!--catalog__item--><!--Barbershop-->  
                         <div class="catalog__item"><!--MISHKA-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-mishka.jpg" width="360" height="576" alt="Mishka Hover">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">MISHKA</h3>
-                                <p class="catalog__item--text">Интернет-магазин вязаных игрушек</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
+                            <img class="catalog__img" src="img/catalog/img-mishka.jpg" width="360" height="576" alt="Mishka Hover">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">MISHKA</h3>
+                                <p class="catalog__text">Интернет-магазин<br>вязаных игрушек</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
                             </div><!--catalog__item-info-->
                         </div><!--catalog__item--><!--MISHKA-->  
                         <div class="catalog__item"><!--A Plus-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-aplus.jpg" width="360" height="576" alt="A Plus">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">A Plus</h3>
-                                <p class="catalog__item--text">Лендинг курсов повышения квалификации</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
+                            <img class="catalog__img" src="img/catalog/img-aplus.jpg" width="360" height="576" alt="A Plus">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">A Plus</h3>
+                                <p class="catalog__text">Лендинг курсов повышения<br>квалификации</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
                             </div><!--catalog__item-info-->
                         </div><!--catalog__item--><!--A Plus-->  
                         <div class="catalog__item"><!--КВАСТ-->
-                            <ul class="catalog__item--rect">
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
-                                <li class="catalog__item--circle"></li>
+                            <ul class="catalog__rect">
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
+                                <li class="catalog__circle"></li>
                             </ul>
-                            <img class="catalog__item--img" src="img/catalog/img-kvast.jpg" width="360" height="576" alt="КВАСТ">
-                            <div class="catalog__item--info visually-hidden">
-                                <h3 class="catalog__item--title">КВАСТ</h3>
-                                <p class="catalog__item--text">Лендинг курсов повышения квалификации</p>
-                                <a class="button catalog__item--btn" href="#">9 900 ₽</a>
+                            <img class="catalog__img" src="img/catalog/img-kvast.jpg" width="360" height="576" alt="КВАСТ">
+                            <div class="catalog__info">
+                                <h3 class="catalog__title">КВАСТ</h3>
+                                <p class="catalog__text">Промо-сайт производителя<br>крафтового кваса</p>
+                                <a class="button catalog__btn" href="#">9 900 ₽</a>
                             </div><!--catalog__item-info-->
                         </div><!--catalog__item--><!--КВАСТ-->
                     </div><!--список каталогов catalog__list-->
@@ -218,10 +207,10 @@
 
                 <div class="paginat">
                     <ul class="paginat__list">
-                        <li class="paginat__item paginat__item--current">1</li>
-                        <li class="paginat__item"><a href="#">2</a></li>
-                        <li class="paginat__item"><a href="#">3</a></li>
-                        <li class="button paginat__item"><a href="#">Следующая</a></li>
+                        <li><a class="paginat__item paginat__item--current" href="#">1</a></li>
+                        <li><a class="paginat__item" href="#">2</a></li>
+                        <li><a class="paginat__item" href="#">3</a></li>
+                        <li><a class="paginat__item" href="#">Следующая</a></li>
                     </ul>    
                 </div>
             </div><!--container-->
