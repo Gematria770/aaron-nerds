@@ -552,6 +552,10 @@ hr {
     padding-bottom: 85px;
 }
 
+.modal-show {
+    display: block;
+}
+
 .modal__form {
     display: flex;
     justify-content: space-between;

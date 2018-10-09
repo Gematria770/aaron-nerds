@@ -196,11 +196,21 @@
 
         <script>
             var link=document.querySelector(".button__contacts");
+            var popup=document.querySelector(".modal-login");
 
             link.addEventListener("click", function (evt) {
                 evt.preventDefault();
-                console.log("Клик по кнопке")
+                popup.classList.add("modal-show");
+                console.log("Открыть");
             });
+
+            var link1=document.querySelector(".modal-close");
+            link1.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.remove("modal-show");
+                console.log("Закрыть");
+            });
+
         </script>
     </body>
 </html>
