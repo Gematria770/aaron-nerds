@@ -193,5 +193,14 @@
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
+
+        <script>
+            var link=document.querySelector(".button__contacts");
+
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                console.log("Клик по кнопке")
+            });
+        </script>
     </body>
 </html>

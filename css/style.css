@@ -85,6 +85,11 @@ fieldset>ul {
     margin-right: 40px;
 }
 
+.site__navigation--current {
+    border-bottom-width: 2px; /* Толщина линии внизу */
+    border-bottom-style: solid; /* Стиль линии внизу */
+    border-bottom-color: black; /* Цвет линии внизу */
+}
 
 .basket {
     /*border: 2px solid red;*/
@@ -1154,7 +1159,10 @@ catalog__info>p {
     
     cursor: pointer;
     
-    padding: 20px 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
     
     /*margin-right: 11px;*/
@@ -1175,9 +1183,9 @@ catalog__info>p {
     color: #000000;/*для ссылок*/
 }
 
-.paginat__list li:nth-child(4) {
-    padding-left: 57px;
-    padding-right: 57px;
+.btb__item {
+    padding-left: 76px;
+    padding-right: 76px;
 }
 
 .paginat__item:hover {
@@ -1193,3 +1201,7 @@ catalog__info>p {
     color: #d5d5d5;
 }
 
+.paginat__item--current {
+    border: 5px solid #eeeeee;
+    background-color: #ffffff;
+}
